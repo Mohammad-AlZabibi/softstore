@@ -1,0 +1,16 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1619983894;s:6:"expire";i:1619987494;s:4:"tags";s:69:"09f_BLOCK_HTML,09f_CAT_C,09f_CAT_C_3,09f_CAT_C_4,09f_CAT_C_5,09f_MAGE";}
+
+<nav class="navigation" role="navigation">
+    <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+                    <li class="level0 level-top ">
+                <a class="level-top" href="http://127.0.0.1:8080/magento/">
+                    Home
+                </a>
+            </li>
+                <li  class="level0 nav-1 category-item first level-top parent"><a href="http://127.0.0.1:8080/magento/music.html"  class="level-top" ><span>موسيقا</span></a><ul class="level0 submenu"><li  class="level1 nav-1-1 category-item first"><a href="http://127.0.0.1:8080/magento/music/english-songs.html" ><span>أغاني انجليزية</span></a></li><li  class="level1 nav-1-2 category-item last"><a href="http://127.0.0.1:8080/magento/music/arabic-songs.html" ><span>أغاني عربية</span></a></li></ul></li><li  class="level0 nav-2 category-item level-top"><a href="http://127.0.0.1:8080/magento/programs.html"  class="level-top" ><span>برمجيات</span></a></li><li  class="level0 nav-3 category-item has-active last level-top parent"><a href="http://127.0.0.1:8080/magento/movies.html"  class="level-top" ><span>أفلام</span></a><ul class="level0 submenu"><li  class="level1 nav-3-1 category-item first active"><a href="http://127.0.0.1:8080/magento/movies/action.html" ><span>أكشن</span></a></li><li  class="level1 nav-3-2 category-item last"><a href="http://127.0.0.1:8080/magento/movies/comedy.html" ><span>كوميدية</span></a></li></ul></li>    </ul>
+</nav>
+<style>
+.navigation .level0 .submenu li.parent > a::after {
+    display:none;
+}
+</style>

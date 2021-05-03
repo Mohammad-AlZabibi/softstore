@@ -1,0 +1,36 @@
+[role="tablist"]{
+    //Tablist title
+    [role="tab"]{
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        display: inline-block;
+        padding-right: 16px;
+        .font-icon('\e926');
+        &[aria-expanded="true"]{
+            .font-icon('\e929');
+        }
+        &:before{
+            position: absolute;
+            right: 0;
+            top: -3px;
+        }
+    }
+
+    [role="presentation"]{
+        &:first-child [role="tab"]{
+            margin-top: 0;
+        }
+    }
+
+    //Tablist content
+    [role="tabpanel"]{
+        margin-bottom: 32px;
+    }
+}
+
+.block[role="tablist"]{
+    .title[role="tab"]{
+        display: block;
+    }
+}

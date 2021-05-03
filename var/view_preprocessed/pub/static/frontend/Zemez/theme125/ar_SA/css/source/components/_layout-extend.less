@@ -1,0 +1,35 @@
+
+& when (@media-target = 'mobile'){
+    .page-wrapper{
+        .navigation,
+        .breadcrumbs,
+        .page-header .header.panel,
+        .header.content,
+        .footer.content,
+        > .widget,
+        > .page-bottom,
+        .block.category.event,
+        .top-container,
+        .page-main{
+            max-width: none;
+            padding-right: 0;
+            padding-left: 0;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .breadcrumbs > .items,
+        .page-main > *{
+            .container-box;
+        }
+        #maincontent .columns {
+            display: block;
+        }
+    }
+}
+
+& when (@media-target = 'desktop'){
+    .navigation > .ui-menu{
+        .container-box;
+    }
+}

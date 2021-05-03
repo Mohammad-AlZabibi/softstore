@@ -1,0 +1,109 @@
+@import 'components/_variables.less';
+
+// Layouts
+
+@layout-column__left-width: 100%;
+@layout-column__right-width: 100%;
+@layout-column-main__sidebar-offset: 0;
+
+// Button
+@button__font-family: @font-family__base;
+@button__font-size: @font-size__base * 1.1;
+@button__font-weight: 400;
+@button__border-radius: 0;
+@button__border: none;
+@button__color: @color-white;
+@button__background: @color-black;
+@button__shadow: none;
+@button__padding: 6px 14px;
+@button__hover__color: @color-white;
+@button__hover__background: @color-primary;
+@button__hover__border: none;
+
+@button-primary__color: @color-white;
+@button-primary__background: @color-primary;
+@button-primary__border: none;
+@button-primary__hover__background: @color-black;
+@button-primary__hover__border: none;
+@button-primary__hover__color: @color-white;
+
+@button__active__color: @color-white;
+@button__active__background: @color-primary;
+
+@button__font-size__l: @button__font-size;
+@button__line-height__l: @default-line-height;
+@button__padding__l: @button__padding;
+
+.lib-button() {
+  text-transform: uppercase;
+  line-height: @default-line-height;
+  letter-spacing: 0.05em;
+  border: 0;
+  @media (min-width: @screen__xl) {
+    padding: 14px 24px;
+    letter-spacing: 0.2em;
+  }
+}
+
+.lib-button-l() {
+  text-transform: uppercase;
+  line-height: @default-line-height;
+  border: 1px solid @color-black;
+  color: @color-black;
+  letter-spacing: 0.05em;
+  @media (min-width: @screen__xl) {
+    padding: 13px 24px;
+    letter-spacing: 0.2em;
+  }
+  @media (max-width: (@screen__xl - 1)) {
+    padding: 5px 14px;
+  }
+  &:hover {
+    background: @color-black;
+    color: @color-white;
+  }
+}
+
+.lib-button-primary() {
+  text-transform: uppercase;
+  line-height: @default-line-height;
+  letter-spacing: 0.05em;
+  border: 0;
+  @media (min-width: @screen__xl) {
+    padding: 14px 24px;
+    letter-spacing: 0.2em;
+  }
+}
+;
+
+// Links variables
+
+@link__color: @color-primary;
+@link__hover__color: @color-accent;
+@link__hover__text-decoration: none;
+@link__active__text-decoration: none;
+
+// Base font`s settings
+
+@font-size__base: 1rem;
+@base__line-height: 1.5em;
+
+// Heading
+
+@heading__color__base: @color-text-light;
+@heading__line-height__base: 1.1;
+@heading__font-weight__base: @font-weight__bold;
+
+// Inputs
+@form-element-input__height: auto;
+@focus__box-shadow: none;
+
+// Menu
+@navigation-level0-item__font-size: 1rem;
+@navigation-level0-item__border: 1px solid @color-border-color;
+@navigation-level0-item__padding: @sm-header-item-padding;
+@navigation-level0-item__text-transform: none;
+
+@navigation-level0-item__active__border-color: @color-primary;
+@submenu-desktop-item__active__border-color: @color-primary;
+@submenu-item__active__border-color: @color-primary;

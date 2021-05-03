@@ -1,0 +1,26 @@
+& when (@media-target = 'desktop') {
+    .form.search.advanced .group.range{
+        display: flex;
+    }
+
+    .block-search .control {
+        padding-bottom: 0;
+    }
+    .form.search.advanced .fields.range .field:first-child .control:after {
+        top: 50%;
+        transform: translateY(-50%);
+        right: -2px;
+    }
+}
+
+.form.search.advanced .fields.range .field.with-addon .control,
+.form.search.advanced .fields.range .field:first-child .control {
+    @media (max-width: @screen__xs) {
+        padding-right: 0;
+    }
+}
+.form.search.advanced .fields.range .field:first-child .control:after {
+    @media (max-width: @screen__xs) {
+        display: none;
+    }
+}

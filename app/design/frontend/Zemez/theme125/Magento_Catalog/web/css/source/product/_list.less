@@ -1,0 +1,218 @@
+//
+//  Generic Grid/List Item
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile') {
+  .products-grid,
+  .products-list {
+    .product-item {
+      // Image
+      .product-image-container {
+        display: inline-block;
+        max-width: 100%;
+      }
+      .product-item-photo {
+        display: flex;
+        flex-basis: 100%;
+      }
+      .product-image-wrapper {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+      }
+      .product-image-photo {
+        bottom: 0;
+        display: block;
+        height: auto;
+        left: 0;
+        margin: auto;
+        max-width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      // Price
+
+      .price-box {
+        .price-box(); // _mixins.scss
+        justify-content: flex-end;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 700;
+        margin-bottom: 12px;
+
+        .price-as-configured {
+          margin-bottom: 0;
+
+          .price-container {
+            margin-bottom: 1em;
+          }
+        }
+      }
+
+      .map-show-info {
+        font-size: 14px;
+        line-height: 14px;
+        &:before {
+          content: "";
+          display: block;
+          font-size: 0;
+          line-height: 0;
+          height: 0;
+        }
+      }
+
+      //Name
+      .product-item-name {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 15px;
+        letter-spacing: .025em;
+        a {
+          color: @color-default;
+          line-height: normal;
+          &:hover {
+            color: @color-primary;
+          }
+        }
+      }
+
+      //Details
+      .product-item-description {
+        margin-top: -8px;
+        margin-bottom: 8px;
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      //Reviews
+      .product-reviews-summary {
+        display: flex;
+        margin-bottom: 7px;
+      }
+      .rating-summary {
+        .label {
+          display: none;
+        }
+      }
+      .reviews-actions {
+        .view {
+          margin-right: 12px;
+        }
+      }
+
+      // Swatches
+
+      .swatch-option {
+        margin-bottom: 10px;
+
+        + .swatch-option {
+          margin-left: 5px;
+        }
+        &.text {
+          padding: 2px;
+        }
+      }
+
+      //Actions
+      .product-item-actions {
+        margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        .actions-primary {
+          display: block;
+          margin-right: 10px;
+
+          .action span, .stock.unavailable span {
+            display: none;
+          }
+
+          .action, .stock.unavailable {
+            display: inline-block;
+            .font-icon('\ea4c', @linearicons-icon-family);
+
+            &:before {
+              font-size: 22px;
+              min-width: 25px;
+              line-height: 1.2;
+            }
+          }
+
+          .action {
+            padding: 0;
+            color: @color-black;
+            background: transparent;
+            transition: .3s all ease;
+
+            &:hover {
+              color: @color-primary;
+            }
+          }
+
+          .stock.unavailable {
+            color: @color-unactive;
+            pointer-events: none;
+            opacity: .3;
+          }
+        }
+
+        .actions-secondary {
+          display: flex;
+          flex-basis: auto;
+          justify-content: center;
+          width: auto;
+          padding-left: 0;
+
+          .action {
+            display: inline-block;
+            font-size: 24px;
+            line-height: 1.2;
+
+            &:before {
+              min-width: 25px;
+              font-size: 20px;
+              line-height: 1.2;
+              color: @color-black;
+              transition: .3s all ease;
+            }
+
+            &.towishlist {
+              .font-icon('\f08a', @fontawesome-icon-family);
+            }
+            &.tocompare {
+              .font-icon('\f012', @fontawesome-icon-family);
+            }
+
+            &:hover:before {
+              color: @color-primary;
+            }
+
+            + .action {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .products-grid {
+    .product-item {
+      text-align: center;
+    }
+
+    .product-reviews-summary {
+      justify-content: flex-start;
+      .reviews-actions {
+        display: none;
+      }
+    }
+    .swatch-attribute .swatch-attribute-options {
+      justify-content: flex-start;
+    }
+  }
+}
